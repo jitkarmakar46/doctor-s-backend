@@ -96,7 +96,7 @@ app.get('/api/appointments/track/:trackingId', (req, res) => {
 
 // Get all appointments (PROTECTED)
 app.get('/api/appointments', verifyToken, (req, res) => {
-    db.all("SELECT * FROM appointments ORDER BY id DESC", [], (err, rows) => {, [], (err, rows) => {
+    db.all("SELECT * FROM appointments ORDER BY id DESC", [], (err, rows) => {
         if (err) {
             return res.status(500).json({ error: 'Internal server error' });
         }
