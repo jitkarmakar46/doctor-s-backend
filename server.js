@@ -9,6 +9,7 @@ const crypto = require('crypto');
 const db = require('./database');
 
 const app = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 5005;
 const JWT_SECRET = 'super_secret_jwt_key_for_dr_dey_clinic'; // In production, move to .env
 
